@@ -7,6 +7,7 @@ import {
 import Header from "./сomponents/Header";
 import Progress from "./сomponents/Progress";
 
+
 const generateClassName = createGenerateClassName({
     productionPrefix: 'co',
 });
