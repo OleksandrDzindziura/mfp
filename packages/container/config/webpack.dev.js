@@ -3,13 +3,12 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 const commonConfig = require('./webpack.common')
 const packageJson = require('../package.json')
 
-console.log('devConfig')
 const devConfig = {
     mode: 'development',
     devServer: {
         port: 8080,
         historyApiFallback: {
-            index: 'index.html'
+            index: '/index.html'
         }
     },
     plugins: [
