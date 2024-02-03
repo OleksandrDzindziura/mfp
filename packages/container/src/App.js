@@ -24,15 +24,14 @@ export default () => {
             <StylesProvider generateClassName={generateClassName}>
                 <div>
                     <Header onSignOut={() => setIsSignedIn(false)} isSignedIn={isSignedIn} />
-                     <Switch>
                       <Suspense fallback={<Progress />}>
-
+                        <Switch>
                          <Route path="/auth">
                            <AuthApp onSignIn={() => setIsSignedIn(true)} />
                          </Route>
                          <Route path="/" component={MarketingApp} />
+                        </Switch>
                       </Suspense>
-                     </Switch>
                 </div>
             </StylesProvider>
         </BrowserRouter>
